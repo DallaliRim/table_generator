@@ -1,0 +1,72 @@
+<html lang="en">
+    <head>
+        <title> 420-320 - assignment 01 </title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet"  href='../CSS/style.css'>
+        <link rel="stylesheet"  href='../CSS/table.css'>
+        <script src="../JS/utilities.js"> </script>
+        <script src="../js/table_generator.js"> </script>
+    </head>
+    <body>
+        <section id='main_container'>
+            <header>
+                <h1> 420-320 Assignment 1 </h1>
+            </header>
+            <section id='middle-section'>
+                <section id='top-section'>
+                    <form id='form'>
+                        <fieldset>
+                            <legend> row-count </legend>
+                            <input id="row-count" class="numberField" type="number" value="2" min="1" max="10" maxlength="2">
+                        </fieldset>
+    
+                        <fieldset> 
+                            <legend> col-count </legend>
+                            <input id="col-count" class="numberField" type="number" value="2" min="1" max="10" maxlength="2"> 
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend> table-width </legend>
+                            <input id="table-width" class="numberField" type="number" value="80" min="1" max="100" maxlength="3">
+                        </fieldset>
+    
+                        <fieldset>
+                            <legend> text-color </legend>
+                            <input id="text-color" class="colorField" type="color" value="#000000">
+                        </fieldset>
+    
+                        <fieldset>
+                            <legend> background-color </legend>
+                            <input id="background-color" class="colorField" type="color" value="#FFFFFF">
+                        </fieldset>
+    
+                        <fieldset>
+                            <legend> border-width </legend>
+                            <input id="border-width" class="numberField" type="number" value="1" min="1" max="100" maxlength="3">
+                        </fieldset>
+    
+                        <fieldset>
+                            <legend> border-color </legend>
+                            <input id="border-color" class="colorField" type="color" value="#000000">
+                        </fieldset>
+                    </form>
+                </section>
+                <section id='main-section'>
+                    <section id='table-render-section'>
+                        <table id="table">   
+                            <!-- The table will be generated here according to the inputs-->                 
+                        </table>
+                    </section>
+                    <section id='table-html-section'>
+                        <textarea id="text-area" rows="10"> 
+                            <!--The HTML code from the table generator will appear here-->
+                        </textarea>
+                    </section>
+                </section>
+            </section>
+            <footer>
+                <h1> Rim Dallali, 1937259, 00004, copyright Fall 2021 </h1>
+            </footer>
+        </section>
+    </body>
+</html>

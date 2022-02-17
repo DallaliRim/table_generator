@@ -1,0 +1,63 @@
+console.log("********  TESTING ASYNCHRONOUS USING CALLBACKS ********* ");
+
+// Write  5 functions called f1, f2, ..., f5
+// each function i  logs its name (f_i) 
+	function f1() {
+		console.log('f_1');
+	}
+	function f2() {
+		console.log('f_2');
+	}
+	function f3() {
+		console.log('f_3'); 
+	}
+	function f4() {
+		console.log('f_4');
+	}
+	function f5() {
+		console.log('f_5');
+	}
+	
+// write a  callback functions called greeting with param am_pm.
+// log `good morning` if param === `am` else log `good evening`.
+	function greeting(am_pm) {
+		if(am_pm === 'am') {
+			console.log('good morning');
+		}
+		else {
+			console.log('good evening');
+		}
+	}
+	
+	
+---------------------------------------------------------------------------
+// test1
+// call the functions in the following order:
+// greeting ('am'),  f1, f2, f3, f4, f5, greeting ('pm')
+	function test1() {
+		greeting('am');
+		f1();
+		f2();
+		f3();
+		f4();
+		f5();
+		greeting('pm');
+	}
+---------------------------------------------------------------------------
+// test2
+// wrap  greeting('am') in setTimeout that executes it after 2secs
+	function test2() {
+		setTimeout(function() {greeting('am')}, 2000);
+	}
+---------------------------------------------------------------------------
+// test3
+// wrap greeting('pm') in setInterval that executes it every 2secs
+// write a setTimeout that cancel teh anoying setInterval after 6secs
+	function test3() {
+		let myInterval = setInterval(function() {greeting('am')}, 2000);
+		setTimeout( function() {clearInterval(myinterval)}, 6000);
+	}
+---------------------------------------------------------------------------
+test1();
+test2();
+test3();

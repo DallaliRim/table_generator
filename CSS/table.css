@@ -1,0 +1,10 @@
+table {
+    border: 1px dotted black; padding:5px;
+    background-color:white; margin: 0 auto;
+}
+    
+td { 	
+    border: 1px solid black;
+    padding:5px;
+}
+    
